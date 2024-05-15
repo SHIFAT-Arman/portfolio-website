@@ -25,7 +25,6 @@ export default function Skills() {
                 className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
                 aria-hidden="true"
               >
-                bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400
                 <div
                   className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-pink-300 via-purple-300 to-fuchsia-400 opacity-30 sm:left-[calc(70%-30rem)] sm:w-[72.1875rem]"
                   style={{
