@@ -9,7 +9,7 @@ const navigation = {
     },
     {
       name: "GitHub",
-      href: "github.com/SHIFAT-Arman",
+      href: "https://github.com/SHIFAT-Arman",
       icon: GithubOriginal,
     },
   ],
