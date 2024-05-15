@@ -62,7 +62,7 @@ export default function Hero() {
               <Image
                 src="/bigData.svg"
                 alt="mans image"
-                className="object-cover rounded-2xl max-w-sm w-5/6 aspect-[6/6] mt-10 h-auto block align-middle lg:mx-14 lg:row-end-2 lg:row-span-2 lg:max-w-none"
+                className="object-cover rounded-2xl max-w-sm w-5/6 aspect-[6/6] h-auto block align-middle lg:mx-14 lg:row-end-2 lg:row-span-2 lg:max-w-none"
                 height={50}
                 width={50}
               />
