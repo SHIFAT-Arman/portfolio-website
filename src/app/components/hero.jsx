@@ -45,13 +45,13 @@ export default function Hero() {
                 </p>
                 <div className="gap-x-6 items-center flex mt-10">
                   <a
-                    href="#"
+                    href="#footer"
                     className="shadow-sm text-white font-semibold text-sm py-[0.625rem] px-[0.875rem] bg-fuchsia-800 rounded-md decoration-auto"
                   >
                     Contact
                   </a>
                   <a
-                    href="#"
+                    href="#pr"
                     className="text-gray-900 leading-6 font-semibold text-sm decoration-inherit"
                   >
                     See projects <span aria-hidden="true">→</span>
