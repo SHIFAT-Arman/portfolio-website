@@ -1,26 +1,38 @@
 "use client";
-import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion, useScroll } from "framer-motion";
 
 export default function Hero() {
   const { scrollYProgress } = useScroll();
-
   return (
     <>
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-[5px] bg-fuchsia-600 origin-[0%] z-50"
-        style={{ scaleX: scrollYProgress }}
-      />
-      <div className="bg-white lg:px-24">
-        <div className="pt-14 from-fuchsia-100 bg-gradient-to-b overflow-hidden isolate relative rounded-3xl  ">
+      <div className="bg-gray-900">
+        {/* Header */}
+        {/* {motion type} */}
+        <motion.div
+          className="fixed top-0 left-0 right-0 h-[5px] bg-[#161d35] origin-[0%] z-50"
+          style={{ scaleX: scrollYProgress }}
+        />
+
+        <main className="relative isolate">
+          {/* Background */}
           <div
-            className="ring-2 ring-indigo-50 shadow-fuchsia-400 shadow-xl bg-fuchsia-50 -skew-x-[30deg]  origin-top-right w-[200%] -mr-96 -z-10 right-2/4 top-0 bottom-0 absolute lg:-mr-96"
+            className="absolute inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
             aria-hidden="true"
-          ></div>
-          <div className="pt-32 pb-32 pl-6 pr-6 max-w-7xl ml-auto mr-auto lg:pl-8 lg:pr-8 ">
-            <div className="max-w-2xl ml-auto mr-auto lg:grid lg:gap-x-8 lg:grid-rows-1 lg:grid-cols-1 lg:gap-y-6 lg:max-w-none lg:ml-0 lg:mr-0 ">
-              <h1 className="text-gray-900 -tracking-wide font-bold text-4xl leading-10 max-w-2xl mt-20 lg:col-auto lg:text-6xl lg:leading-[1] ">
+          >
+            <div
+              className="aspect-[1108/632] w-[69.25rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-25"
+              style={{
+                clipPath:
+                  "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
+              }}
+            />
+          </div>
+
+          {/* Header section */}
+          <div className="px-6 pt-14 lg:px-8">
+            <div className="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
+              <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
                 <TypeAnimation
                   sequence={[
                     // Same substring at the start will only be typed once, initially
@@ -36,40 +48,60 @@ export default function Hero() {
                   repeat={0}
                   preRenderFirstString={true}
                 />
-              </h1>
-              <div className="max-w-xl mt-6 lg:row-start-1 lg:col-end-1 lg:mt-0 ">
-                <p className="text-gray-600 leading-8 text-lg m-0">
-                  currently doing my BSc in Computer Science and Engineering. I
-                  am a passionate programmer and a web developer. I intend to
-                  build my career around Data Science and Machine Learning.
-                </p>
-                <div className="gap-x-6 items-center flex mt-10">
-                  <a
-                    href="#footer"
-                    className="shadow-sm text-white font-semibold text-sm py-[0.625rem] px-[0.875rem] bg-fuchsia-800 rounded-md decoration-auto"
-                  >
-                    Contact
-                  </a>
-                  <a
-                    href="#pr"
-                    className="text-gray-900 leading-6 font-semibold text-sm decoration-inherit"
-                  >
-                    See projects <span aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </div>
-
-              <Image
-                src="/bigData.svg"
-                alt="mans image"
-                className="object-cover rounded-2xl max-w-sm w-5/6 aspect-[6/6] h-auto block align-middle lg:mx-14 lg:row-end-2 lg:row-span-2 lg:max-w-none"
-                height={50}
-                width={50}
-              />
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-gray-300 italic">
+                keywords: Machine-Learning, Deep-Learning, Natural Language
+                Processing (NLP), Artificial Intelligence, Web Development,
+                Cybersecurity
+              </p>
             </div>
           </div>
-          <div className="from-white bg-gradient-to-t h-24 -z-10 bottom-0 inset-x-0 absolute md:h-32"></div>
-        </div>
+
+          {/* Content section */}
+          <div className="mx-auto mt-20 max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+              <div className="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 lg:max-w-none lg:grid-cols-2">
+                <div>
+                  <p>
+                    currently a student at AIUB, studying Computer Science and
+                    Engineering. I am also a self-taught web developer and a
+                    tech enthusiast. I intend to shape my career in the field of
+                    Data Science. I have been working with machine learning
+                    algorithms, deep learning and Artificial Intelligence for a
+                    while now. I am also trying out the CTF competitions which
+                    is a competitive platform for cybersecurity enthuaists.
+                  </p>
+                  <p className="mt-8">
+                    In web-developing I have been working with the front-end
+                    side frameworks like ReactJS, NextJS, TailwindCSS,
+                    Bootstrap, Material-UI, etc. and for the back-end side I am
+                    stil exploring.
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    In the machine learning field I have been working with the
+                    Kaggle datasets and also with the real-world datasets. I
+                    have been working with the machine learning algorithms like
+                    Linear Regression, Logistic Regression, Decision Trees,
+                    Random Forest, KNN, SVM, K-Means, Hierarchical Clustering,
+                    PCA, etc. I prefer to use the Python programming language
+                    for data visualizations.
+                  </p>
+                  <p className="mt-8">
+                    In the deep learning field I have been working with
+                    different types of activation algorithms such as Sigmoid,
+                    ReLU, Leaky ReLU, Tanh, etc. I have been working with the
+                    deep learning algorithms like CNN, RNN, LSTM, GRU, etc. I
+                    have also been working with the NLP algorithms like
+                    Word2Vec, GloVe, BERT, etc.
+                  </p>
+                </div>
+              </div>
+              {/* logo */}
+            </div>
+          </div>
+        </main>
       </div>
     </>
   );

@@ -1,61 +1,102 @@
 "use client";
-import { CplusplusPlain } from "devicons-react";
-import { JavaOriginalWordmark } from "devicons-react";
-import { OracleOriginal } from "devicons-react";
-import { JavascriptOriginal } from "devicons-react";
-import { ReactOriginalWordmark } from "devicons-react";
-import { NodejsOriginalWordmark } from "devicons-react";
-import { NextjsOriginalWordmark } from "devicons-react";
 
-import { PythonOriginalWordmark } from "devicons-react";
-import { PandasOriginalWordmark } from "devicons-react";
-import { NumpyOriginalWordmark } from "devicons-react";
+import { useState } from "react";
+
+import {
+  CplusplusPlain,
+  JavaOriginalWordmark,
+  OracleOriginal,
+  JavascriptOriginal,
+  ReactOriginalWordmark,
+  NodejsOriginalWordmark,
+  NextjsOriginalWordmark,
+  PythonOriginalWordmark,
+  PandasPlainWordmark,
+  NumpyOriginalWordmark,
+  LinuxOriginal,
+  TensorflowOriginal,
+  KerasOriginal,
+  MatplotlibOriginal,
+  AnacondaOriginalWordmark,
+} from "devicons-react";
+
+const iconsMap = {
+  CplusplusPlain,
+  JavaOriginalWordmark,
+  OracleOriginal,
+  JavascriptOriginal,
+  ReactOriginalWordmark,
+  NodejsOriginalWordmark,
+  NextjsOriginalWordmark,
+  PythonOriginalWordmark,
+  PandasPlainWordmark,
+  NumpyOriginalWordmark,
+  LinuxOriginal,
+  TensorflowOriginal,
+  KerasOriginal,
+  MatplotlibOriginal,
+  AnacondaOriginalWordmark,
+};
+
+const skillsData = [
+  { icon: "CplusplusPlain", size: 60, bgClass: "p-8 sm:p-10" },
+  { icon: "JavaOriginalWordmark", size: 60, bgClass: "p-6 sm:p-10" },
+  { icon: "OracleOriginal", size: 80, bgClass: "p-6 sm:p-10" },
+  { icon: "JavascriptOriginal", size: 60, bgClass: "p-6 sm:p-10" },
+  { icon: "ReactOriginalWordmark", size: 60, bgClass: "p-6 sm:p-10" },
+  { icon: "NodejsOriginalWordmark", size: 80, bgClass: "p-6 sm:p-10" },
+  { icon: "NextjsOriginalWordmark", size: 80, bgClass: "p-6 sm:p-10" },
+  { icon: "PythonOriginalWordmark", size: 60, bgClass: "p-6 sm:p-10" },
+  { icon: "NumpyOriginalWordmark", size: 90, bgClass: "p-6 sm:p-10" },
+  { icon: "PandasPlainWordmark", size: 70, bgClass: "p-6 sm:p-10" },
+  { icon: "LinuxOriginal", size: 70, bgClass: "p-6 sm:p-10" },
+  { icon: "TensorflowOriginal", size: 70, bgClass: "p-6 sm:p-10" },
+  { icon: "KerasOriginal", size: 70, bgClass: "p-6 sm:p-10" },
+
+  { icon: "MatplotlibOriginal", size: 70, bgClass: "p-6 sm:p-10" },
+  { icon: "AnacondaOriginalWordmark", size: 70, bgClass: "p-6 sm:p-10" },
+];
 
 export default function Skills() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <div className="bg-white py-24 sm:py-32" id="sk">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
-          <div className="mx-auto w-full max-w-xl lg:mx-0">
-            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-gray-900 ">
-              Skills matter most
-            </h2>
-            <div className="relative isolate px-6 pt-14 lg:px-8">
-              <div
-                className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-                aria-hidden="true"
-              >
-                <div
-                  className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-pink-300 via-purple-300 to-fuchsia-400 opacity-30 sm:left-[calc(70%-30rem)] sm:w-[72.1875rem]"
-                  style={{
-                    clipPath:
-                      "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-                  }}
-                />
+    <>
+      <div className="bg-gray-900 pt-10" id="sk">
+        <main className="relative isolate">
+          {/* CTA section */}
+
+          <div className="relative isolate -z-10 mt-10">
+            <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+              <div className="mx-auto  max-w-2xl  gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
+                <div className="relative ">
+                  <h2 className="p-3 text-3xl sm:text-5xl font-bold text-white">
+                    Skills
+                  </h2>
+                  <p className="mt-6 text-lg leading-8 text-gray-300 italic">
+                    I have worked with these following frameworks and tools
+                  </p>
+                </div>
+                <div className="-mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl sm:grid-cols-3">
+                  {skillsData.map((skill, index) => {
+                    const IconComponent = iconsMap[skill.icon];
+                    return (
+                      <div
+                        key={index}
+                        className={`bg-white/5 ${skill.bgClass}`}
+                      >
+                        <div className="flex items-center justify-center max-h-12 w-full object-contain">
+                          <IconComponent size={skill.size} />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
-
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              I have experience in these programming languages and frameworks. I
-              intend to learn new technologies and frameworks to keep up with
-              the latest trends in the industry.
-            </p>
-            <div className="mt-8 flex items-center gap-x-6"></div>
           </div>
-          <div className="mx-auto grid w-full max-w-xl grid-cols-2 justify-items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
-            <CplusplusPlain size={60} />
-            <JavaOriginalWordmark size={60} />
-            <OracleOriginal size={80} />
-            <JavascriptOriginal size={60} />
-            <ReactOriginalWordmark size={60} />
-            <NodejsOriginalWordmark size={80} />
-            <NextjsOriginalWordmark size={80} />
-            <PythonOriginalWordmark size={60} />
-            <NumpyOriginalWordmark size={90} />
-            <PandasOriginalWordmark size={70} />
-          </div>
-        </div>
+        </main>
       </div>
-    </div>
+    </>
   );
 }

@@ -42,8 +42,8 @@ export default function Navbar() {
               >
                 <Link
                   className={`${
-                    link.href === pathname ? "text-fuchsia-800 font-bold" : ""
-                  }text-fuchsia-800 leading-6 font-semibold text-sm p-2 rounded-md gap-x-3 flex decoration-inherit hover:text-fuchsia-800`}
+                    link.href === pathname ? "text-[#161d35] font-bold" : ""
+                  }text-[#161d35] leading-6 font-semibold text-sm p-2 rounded-md gap-x-3 flex decoration-inherit hover:text-[#161d35]`}
                   href={link.href}
                 >
                   <span className="text-gray-400 font-medium text-[0.625rem] bg-white border-gray-200 border rounded-lg justify-center items-center shrink-0 w-6 h-6 flex">
