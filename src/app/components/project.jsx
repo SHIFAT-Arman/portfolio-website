@@ -11,6 +11,13 @@ import {
 
 const actions = [
   {
+    title: "Deep Learning-ANN Classification",
+    href: "https://dl-ann-classification-zireael.streamlit.app/",
+    icon: TableCellsIcon,
+    iconForeground: "text-blue-700",
+    iconBackground: "bg-blue-50",
+  },
+  {
     title: "Welfare-system management app",
     href: "#",
     icon: UsersIcon,
@@ -19,8 +26,8 @@ const actions = [
   },
   {
     title: "Next JS Website",
-    href: "#",
-    icon: BanknotesIcon,
+    href: "https://ieeeaiubsb.com/",
+    icon: AcademicCapIcon,
     iconForeground: "text-purple-700",
     iconBackground: "bg-purple-50",
   },
@@ -30,13 +37,6 @@ const actions = [
     icon: UsersIcon,
     iconForeground: "text-sky-700",
     iconBackground: "bg-sky-50",
-  },
-  {
-    title: "Python Data Analysis",
-    href: "#",
-    icon: TableCellsIcon,
-    iconForeground: "text-yellow-700",
-    iconBackground: "bg-yellow-50",
   },
 ];
 
@@ -106,7 +106,11 @@ export default function Project() {
                 </div>
                 <div className="mt-8">
                   <h3 className="text-base font-semibold leading-6 text-white">
-                    <a href={action.href} className="focus:outline-none">
+                    <a
+                      href={action.href}
+                      className="focus:outline-none"
+                      target="_blank"
+                    >
                       {/* Extend touch target to entire panel */}
                       <span className="absolute inset-0" aria-hidden="true" />
                       {action.title}
