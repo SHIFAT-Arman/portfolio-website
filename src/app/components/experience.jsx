@@ -14,7 +14,7 @@ const exps = [
   {
     name: "IEEE AIUB Student Branch",
     description:
-      "From 2023 I have been a member of IEEE AIUB Student Branch and also the web development team. I have been webmaster of IEEE BEITHCON-2024 from IEEE Bangladesh Section.",
+      "From 2023 I have been a member of IEEE AIUB Student Branch and also the web development team. I have been webmaster of IEEE BECITHCON-2024, IEEE ICCIT 2024 from IEEE Bangladesh Section.",
     icon: UserGroupIcon,
   },
 ];
