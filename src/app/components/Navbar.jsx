@@ -20,6 +20,11 @@ const links = [
     href: "/#pr",
   },
   {
+    icon: "W",
+    text: "Writings",
+    href: "/writings",
+  },
+  {
     icon: "S",
     text: "Socials",
     href: "/#footer",
