@@ -65,7 +65,7 @@ export default async function AccordionWriting() {
             <div className="prose dark:prose-invert max-w-none">
               <MarkdownContent content={writing.short_desc} />
               <Link href={`/writings/${writing.slug}`} >
-                <SquareArrowOutUpRight className="inline-block text-white" />
+                <SquareArrowOutUpRight strokeWidth={2} className="text-white inline-block" />
               </Link>
             </div>
           </AccordionContent>
