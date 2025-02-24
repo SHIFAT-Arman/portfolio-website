@@ -1,6 +1,6 @@
 import { createServerClient } from '@supabase/ssr';
 
-export function createClient(cookieStore) {
+export async function createClient(cookieStore) {
   // Use a fallback object if cookieStore is not provided
   const effectiveCookies = cookieStore || {
     getAll: () => [],
@@ -26,6 +26,7 @@ export function createClient(cookieStore) {
           }
         },
       },
+
     }
   );
 }

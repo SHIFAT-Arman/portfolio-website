@@ -37,33 +37,21 @@ import { createClient } from "@/lib/supabase/server";
 import MarkdownContent from "@/app/components/MarkdownContent";
 import { cookies } from "next/headers";
 
-export async function generateStaticParams() {
-  const supabase = createClient();
-  const { data: posts } = await supabase
-    .from("posts")
-    .select("slug")
-    .eq("published", true);
-  console.log(posts.slug);
-  return (
-    posts?.map((post) => ({
-      slug: post.slug,
-    })) || []
-  );
-}
 
 export default async function PostPage({ params }) {
+  const cookieStore = cookies();
+  const supabase = await createClient(cookieStore);
 
-  const supabase = createClient();
-  const { data: post } = await supabase
+  // Fetch post dynamically on each request
+  const { data: post, error } = await supabase
     .from("posts")
     .select("*")
     .eq("slug", params.slug)
     .single();
-  console.log(post);
-  if (!post) {
+
+  if (error || !post) {
     return <div className="container mx-auto py-12">Post not found</div>;
   }
-  console.log(post.title);
   return (
     <article className="container mx-auto py-12 max-w-3xl pt-24">
       <header className="mb-8">
