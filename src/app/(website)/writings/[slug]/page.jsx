@@ -32,17 +32,18 @@
 //     id: writing.id.toString(),
 //   }));
 // }
+
 import { createClient } from "@/lib/supabase/server";
 import MarkdownContent from "@/app/components/MarkdownContent";
 import { cookies } from "next/headers";
 
 export async function generateStaticParams() {
-  const supabase = await createClient();
+  const supabase = createClient();
   const { data: posts } = await supabase
     .from("posts")
     .select("slug")
     .eq("published", true);
-
+  console.log(posts.slug);
   return (
     posts?.map((post) => ({
       slug: post.slug,
@@ -51,8 +52,8 @@ export async function generateStaticParams() {
 }
 
 export default async function PostPage({ params }) {
-  const cookieStore = cookies()
-  const supabase = createClient(cookieStore);
+
+  const supabase = createClient();
   const { data: post } = await supabase
     .from("posts")
     .select("*")
