@@ -36,7 +36,7 @@
 import { createClient } from "@/lib/supabase/server";
 import MarkdownContent from "@/app/components/MarkdownContent";
 import { cookies } from "next/headers";
-
+import ScrollProgress from "@/app/components/ScrollProgress__";
 
 export default async function PostPage({ params }) {
   const cookieStore = cookies();
@@ -48,20 +48,22 @@ export default async function PostPage({ params }) {
     .select("*")
     .eq("slug", params.slug)
     .single();
-
   if (error || !post) {
     return <div className="container mx-auto py-12">Post not found</div>;
   }
   return (
-    <article className="container mx-auto py-12 max-w-3xl pt-24">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold text-white">{post.title}</h1>
-        <time className="text-gray-600 mt-2 block">
-          {new Date(post.created_at).toLocaleDateString()}
-        </time>
-      </header>
+    <>
+      <ScrollProgress />
 
-      <MarkdownContent content={post.content} />
-    </article>
+      <article className=" max-w-7xl px-6 lg:px-8 pt-20 mx-auto">
+        <header className="mb-8">
+          <h1 className="text-4xl font-bold text-white mt-4">{post.title}</h1>
+          <time className="text-gray-300 mt-2 block">
+            {new Date(post.created_at).toLocaleDateString()}
+          </time>
+        </header>
+        <MarkdownContent content={post.content} />
+      </article>
+    </>
   );
 }

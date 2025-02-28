@@ -32,7 +32,7 @@ export default function SocialLinks() {
           ))}
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; 2024 made by Shifat Arman.
+          &copy; 2025 made by Shifat Arman.
         </p>
       </div>
     </footer>

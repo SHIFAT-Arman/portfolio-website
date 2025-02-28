@@ -12,6 +12,7 @@ import {
 const actions = [
   {
     title: "Deep Learning-ANN Classification",
+    desc: "",
     href: "https://dl-ann-classification-zireael.streamlit.app/",
     icon: TableCellsIcon,
     iconForeground: "text-blue-700",
@@ -20,6 +21,7 @@ const actions = [
   {
     title: "Welfare-system management app",
     href: "#",
+    desc: "",
     icon: UsersIcon,
     iconForeground: "text-teal-700",
     iconBackground: "bg-teal-50",
@@ -27,12 +29,14 @@ const actions = [
   {
     title: "Next JS Website",
     href: "https://ieeeaiubsb.com/",
+    desc: "",
     icon: AcademicCapIcon,
     iconForeground: "text-purple-700",
     iconBackground: "bg-purple-50",
   },
   {
     title: "Transaction system database model",
+    desc: "",
     href: "#",
     icon: UsersIcon,
     iconForeground: "text-sky-700",
@@ -116,11 +120,7 @@ export default function Project() {
                       {action.title}
                     </a>
                   </h3>
-                  <p className="mt-2 text-sm text-gray-500">
-                    Doloribus dolores nostrum quia qui natus officia quod et
-                    dolorem. Sit repellendus qui ut at blanditiis et quo et
-                    molestiae.
-                  </p>
+                  <p className="mt-2 text-sm text-gray-500">{action.desc}</p>
                 </div>
                 <span
                   className="pointer-events-none absolute right-6 top-6 text-gray-300 group-hover:text-gray-400"
