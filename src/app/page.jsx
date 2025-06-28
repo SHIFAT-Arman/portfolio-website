@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import SocialLinks from "./components/Footer";
 import Skills from "./components/Skills";
 import ScrollProgress from "./components/ScrollProgress__";
+import {Globe} from "@/components/ui/globe";
 
 export default function Index() {
   return (
@@ -16,6 +17,7 @@ export default function Index() {
       <Project />
       {/* <DrawerDemo /> */}
       <SocialLinks />
+        {/*<Globe/>*/}
     </>
   );
 }

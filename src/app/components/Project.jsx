@@ -7,6 +7,7 @@ import {
   ReceiptRefundIcon,
   UsersIcon,
   TableCellsIcon,
+  BuildingOffice2Icon,
 } from "@heroicons/react/24/outline";
 
 const actions = [
@@ -39,6 +40,14 @@ const actions = [
     desc: "",
     href: "#",
     icon: UsersIcon,
+    iconForeground: "text-sky-700",
+    iconBackground: "bg-sky-50",
+  },
+  {
+    title: "Corporate Task Management System",
+    desc: "This app was developed by Windows Forms (.Net Framework) in C# and mySQL Database.",
+    href: "https://github.com/SHIFAT-Arman/CorporateTaskManagementSystem_V2",
+    icon: BuildingOffice2Icon,
     iconForeground: "text-sky-700",
     iconBackground: "bg-sky-50",
   },
